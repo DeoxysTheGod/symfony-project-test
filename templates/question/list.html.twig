@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des questions{% endblock %}
+
+{% block body %}
+    <h1>Liste des Questions</h1>
+    <a href="{{ path('app_question_new') }}" class="btn btn-success">Créer une Question</a>
+    <ul>
+        {% for question in questions %}
+            <li>
+                <a href="{{ path('app_question_show', {'id': question.id}) }}">
+                    {{ question.content }} ({{ question.type }})
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

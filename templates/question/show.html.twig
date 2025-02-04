@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail de la question{% endblock %}
+
+{% block body %}
+    <h1>{{ question.content }} ({{ question.type }})</h1>
+    <h3>Choix :</h3>
+    <ul>
+        {% for choice in question.choices %}
+            <li>
+                {{ choice.text }} {% if choice.isCorrect %} ✅ {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('app_question_list') }}" class="btn btn-secondary">Retour</a>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <h1>Créer une question</h1>
+
+    {{ form_start(form) }}
+
+    <div class="mb-3">
+        {{ form_row(form.content) }}
+    </div>
+
+    <div class="mb-3">
+        {{ form_row(form.type) }}
+    </div>
+
+    <h3>Choix de réponse</h3>
+    <div id="choices-list" data-prototype="{{ form_widget(form.choices.vars.prototype)|e }}">
+        {% for choiceForm in form.choices %}
+            <div class="choice-item">
+                {{ form_row(choiceForm) }}
+                <button type="button" class="btn btn-danger remove-choice">Supprimer</button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <button type="button" class="btn btn-secondary" id="add-choice">Ajouter un choix</button>
+
+    <br><br>
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+
+    {{ form_end(form) }}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let collectionHolder = document.querySelector('#choices-list');
+        let addChoiceButton = document.querySelector('#add-choice');
+
+        addChoiceButton.addEventListener('click', function () {
+            let prototype = collectionHolder.dataset.prototype;
+            let index = collectionHolder.children.length;
+            let newForm = prototype.replace(/__name__/g, index);
+
+            let div = document.createElement('div');
+            div.classList.add('choice-item');
+            div.innerHTML = newForm + '<button type="button" class="btn btn-danger remove-choice">Supprimer</button>';
+            collectionHolder.appendChild(div);
+
+            addRemoveChoiceListeners();
+        });
+
+        function addRemoveChoiceListeners() {
+            document.querySelectorAll('.remove-choice').forEach(button => {
+                button.removeEventListener('click', removeChoice);
+                button.addEventListener('click', removeChoice);
+            });
+        }
+
+        function removeChoice(event) {
+            event.target.parentElement.remove();
+        }
+
+        addRemoveChoiceListeners();
+    });
+</script>
+
+{% endblock %}
