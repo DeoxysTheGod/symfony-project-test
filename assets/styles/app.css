@@ -126,3 +126,18 @@ footer {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.choice-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
