@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}QCM App{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="{{ path('app_home') }}">Accueil</a></li>
-                <li><a href="{{ path('app_question_list') }}">Liste des Questions</a></li>
-                <li><a href="{{ path('app_question_new') }}">Ajouter une Question</a></li>
+        <nav class="nav">
+            <ul class="container">
+                <li><a class="btn" href="{{ path('app_home') }}">Accueil</a></li>
+                {% if app.user %}
+                <li><a class="btn" href="{{ path('app_question_list') }}">Liste des Questions</a></li>
+                <li><a class="btn" href="{{ path('app_question_new') }}">Ajouter une Question</a></li>
+                <li class="end-nav nav-logout"><a class="btn" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                {% else %}
+                <li class="end-nav"><a class="btn" href="{{ path('app_register') }}">Créer un compte</a></li>
+                <li class="end-nav"><a class="btn" href="{{ path('app_login') }}">Connexion</a></li>
+                {% endif %}
+                <li>
+                  <div class="dropdown">
+                    <button id="language-btn" class="btn">
+                      <img id="current-flag" src="http://127.0.0.1:8001/images/flags/fr.png" alt="France"> 
+                      <span id="current-lang">France</span>
+                    </button>
+                    <ul id="language-list" class="dropdown-menu"></ul>
+                  </div>
+                </li>
+
             </ul>
         </nav>
     </header>
@@ -24,5 +40,6 @@
     <footer>
         <p>&copy; 2025 QCM App</p>
     </footer>
+    <script src="{{ asset('app.js') }}"></script>
 </body>
 </html>
