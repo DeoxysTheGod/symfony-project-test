@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}QCM App{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    <script src="{{ asset('scripts/start.js') }}"></script>
 </head>
 <body>
     <header>
@@ -22,8 +23,8 @@
                 <li>
                   <div class="dropdown">
                     <button id="language-btn" class="btn">
-                      <img id="current-flag" src="http://127.0.0.1:8001/images/flags/fr.png" alt="France"> 
-                      <span id="current-lang">France</span>
+                      <img id="current-flag" src="http://127.0.0.1:8001/images/flags/en.png" alt="English"> 
+                      <span id="current-lang">English</span>
                     </button>
                     <ul id="language-list" class="dropdown-menu"></ul>
                   </div>

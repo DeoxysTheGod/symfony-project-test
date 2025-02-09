@@ -6,13 +6,9 @@
 
     {{ form_start(form) }}
 
-    <div>
-        {{ form_row(form.content) }}
-    </div>
+    {{ form_row(form.content) }}
 
-    <div>
-        {{ form_row(form.type) }}
-    </div>
+    {{ form_row(form.type) }}
 
     <h3>Choix de réponse</h3>
     <div id="choices-list" data-prototype="{{ form_widget(form.choices.vars.prototype)|e }}">
@@ -27,6 +23,7 @@
     <button type="button" class="btn btn-secondary" id="add-choice">Ajouter un choix</button>
 
     {{ form_end(form) }}
+
     </form>
 </div>
 

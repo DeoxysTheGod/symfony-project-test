@@ -1,0 +1,5 @@
+form:
+  content: "Énoncé"
+  type: "type"
+  choixes: "Choix"
+  save: "Enregistrer"

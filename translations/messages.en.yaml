@@ -1,0 +1,5 @@
+form:
+  content: "Content"
+  type: "Type"
+  choices: "Choices"
+  save: "Save"

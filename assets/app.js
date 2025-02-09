@@ -19,16 +19,19 @@ document.addEventListener("DOMContentLoaded", async function () {
             li.innerHTML = `<img src="${flagUrl}" alt="${lang.name}"> ${lang.name}`;
             li.addEventListener("click", () => changeLanguage(lang.code, flagUrl, lang.name));
             languageList.appendChild(li);
+            if (lang.code === localStorage.getItem("lang")) {
+                changeLanguage(lang.code, flagUrl, lang.name);
+            }
         });
     } catch (error) {
-        console.error("Erreur lors du chargement des langues :", error);
+      console.error("Error during languages loading:", error);
     }
 
     function changeLanguage(code, flag, name) {
         currentFlag.src = flag;
         currentFlag.alt = name;
         currentLang.textContent = name;
-        document.documentElement.lang = code; // Change la langue de la page
-        console.log("Langue changée :", code); // Ici, ajoute la logique pour mettre à jour la langue côté serveur
+        document.documentElement.lang = code;
+        localStorage.setItem("lang", code);
     }
 });
