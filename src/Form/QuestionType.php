@@ -22,7 +22,7 @@ class QuestionType extends AbstractType
                 'label' => 'form.type',
             ])
             ->add('choices', CollectionType::class, [
-                'label' => "form.choices",
+                'label' => false,
                 'entry_type' => ChoiceTypeForm::class,
                 'allow_add' => true,
                 'allow_delete' => true,
@@ -32,6 +32,7 @@ class QuestionType extends AbstractType
             ])
             ->add('save', SubmitType::class, [
                 'label' => 'form.save',
+                'attr' => ['class' => 'btn'],
             ]);
     }
 

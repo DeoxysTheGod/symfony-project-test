@@ -15,12 +15,12 @@
         {% for choiceForm in form.choices %}
             <div class="choice-item">
                 {{ form_widget(choiceForm) }}
-                <button type="button" class="btn btn-danger remove-choice">Supprimer</button>
+                <button type="button" class="btn">Supprimer</button>
             </div>
         {% endfor %}
     </div>
 
-    <button type="button" class="btn btn-secondary" id="add-choice">Ajouter un choix</button>
+    <button type="button" class="btn" id="add-choice">Ajouter un choix</button>
 
     {{ form_end(form) }}
 
