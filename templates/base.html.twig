@@ -11,20 +11,20 @@
     <header>
         <nav class="nav">
             <ul class="container">
-                <li><a class="btn" href="{{ path('app_home') }}">Accueil</a></li>
+                <li><a class="btn" href="{{ path('app_home') }}">{{ "home" | trans }}</a></li>
                 {% if app.user %}
-                <li><a class="btn" href="{{ path('app_question_list') }}">Liste des Questions</a></li>
-                <li><a class="btn" href="{{ path('app_question_new') }}">Ajouter une Question</a></li>
-                <li class="end-nav nav-logout"><a class="btn" href="{{ path('app_logout') }}">Déconnexion</a></li>
+                <li><a class="btn" href="{{ path('app_question_list') }}">{{ 'question.list' | trans }}</a></li>
+                <li><a class="btn" href="{{ path('app_question_new') }}">{{ 'question.add' | trans }}</a></li>
+                <li class="end-nav nav-logout"><a class="btn" href="{{ path('app_logout') }}">{{ 'account.logout' | trans }}</a></li>
                 {% else %}
-                <li class="end-nav"><a class="btn" href="{{ path('app_register') }}">Créer un compte</a></li>
-                <li class="end-nav"><a class="btn" href="{{ path('app_login') }}">Connexion</a></li>
+                <li class="end-nav"><a class="btn" href="{{ path('app_register') }}">{{ 'account.create-account' | trans }}</a></li>
+                <li class="end-nav"><a class="btn" href="{{ path('app_login') }}">{{ 'account.signin' | trans }}</a></li>
                 {% endif %}
                 <li>
                   <div class="dropdown">
-                    <button id="language-btn" class="btn">
-                      <img id="current-flag" src="http://127.0.0.1:8001/images/flags/en.png" alt="English"> 
-                      <span id="current-lang">English</span>
+                    <button id="language-btn" class="btn invisible">
+                      <img id="current-flag" src="http://127.0.0.1:8001/images/flags/fr.png" alt="France">
+                      <span id="current-lang">France</span>
                     </button>
                     <ul id="language-list" class="dropdown-menu"></ul>
                   </div>

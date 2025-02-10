@@ -1,5 +1,17 @@
+home: "Accueil"
 form:
   content: "Énoncé"
   type: "type"
   choixes: "Choix"
   save: "Enregistrer"
+  password: "Mot de passe"
+  email: "Email"
+  register: "S'enregistrer"
+  remember-me: "Se souvenir de moi ?"
+question:
+  list: "Voir les questiions"
+  add: "Ajouter une question"
+account:
+  signin: "Se connecter"
+  logout: "Se déconnecter"
+  create-account: "Créer un compte"

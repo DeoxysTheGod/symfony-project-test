@@ -3,17 +3,18 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <h1>{{ "account.create-account" | trans }}</h1>
 
     {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+        {{ form_row(registrationForm.email,{
+          label: 'form.email'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        {{ form_row(registrationForm.plainPassword, {
+          label: 'form.password'
+        }) }}
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn">{{ "form.register" | trans }}</button>
     {{ form_end(registrationForm) }}
 {% endblock %}

@@ -1,5 +1,17 @@
+home: "Home"
 form:
   content: "Content"
   type: "Type"
   choices: "Choices"
   save: "Save"
+  password: "Password"
+  email: "Email"
+  register: "Register"
+  remember-me: "Remember me ?"
+question:
+  list: "Show questions"
+  add: "Add a question"
+account:
+  signin: "Sign in"
+  logout: "Log out"
+  create-account: "Create account"

@@ -1,5 +1,8 @@
-console.log('This is from start')
+languageCode = localStorage.getItem("lang");
 
-if (localStorage.getItem("lang")) {
-    document.documentElement.lang = localStorage.getItem("lang");
+if (!languageCode) {
+  localStorage.setItem("lang", "fr");
+  languageCode = "fr";
 }
+
+document.documentElement.lang = languageCode;

@@ -17,21 +17,32 @@ document.addEventListener("DOMContentLoaded", async function () {
             const li = document.createElement("li");
             const flagUrl = `${apiUrl}${lang.flag}`;
             li.innerHTML = `<img src="${flagUrl}" alt="${lang.name}"> ${lang.name}`;
-            li.addEventListener("click", () => changeLanguage(lang.code, flagUrl, lang.name));
+            li.addEventListener("click", () => {
+              changeLanguage(lang.code, flagUrl, lang.name);
+              location.reload()
+            });
             languageList.appendChild(li);
             if (lang.code === localStorage.getItem("lang")) {
                 changeLanguage(lang.code, flagUrl, lang.name);
             }
         });
+
+        languageBtn.classList.remove("invisible");
     } catch (error) {
       console.error("Error during languages loading:", error);
     }
 
     function changeLanguage(code, flag, name) {
-        currentFlag.src = flag;
-        currentFlag.alt = name;
-        currentLang.textContent = name;
-        document.documentElement.lang = code;
-        localStorage.setItem("lang", code);
+      currentFlag.src = flag;
+      currentFlag.alt = name;
+      currentLang.textContent = name;
+      document.documentElement.lang = code;
+      localStorage.setItem("lang", code);
+      fetch(`/change-locale/${code}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
     }
 });
