@@ -13,7 +13,7 @@
 
 ## Informations
 
-This porject is for educational purposes only. It is a simple QCM project with Symfony.
+This project is for educational purposes only. It is a simple QCM project with Symfony.
 
 * **php:** `8.3.15`
 * **symfony-version:** `7.2.2`
