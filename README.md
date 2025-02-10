@@ -1,6 +1,18 @@
-# QCM Project with Symfony
+<div align="center">
+# ~~ QCM Project with Symfony ~~
+</div>
+
+<div align="center">
+  <br>
+  <a href="https://www.php.net/manual/en/"><kbd> <br> PHP doc <br> </kbd></a>
+  <a href="https://symfony.com/doc/current/index.html"><kbd> <br> Symfony doc <br> </kbd></a>&ensp;&ensp;
+  <a href="https://getcomposer.org/doc/"><kbd> <br> Composer doc <br> </kbd></a>&ensp;&ensp;
+</div><br>
 
 ## Informations
+
+This porject is for educational purposes only. It is a simple QCM project with Symfony.
+
 * **php:** `8.3.15`
 * **symfony-version:** `7.2.2`
 * **composer-version:** `2.8.5`
