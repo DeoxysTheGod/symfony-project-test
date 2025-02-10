@@ -9,7 +9,7 @@ form:
   register: "S'enregistrer"
   remember-me: "Se souvenir de moi ?"
 question:
-  list: "Voir les questiions"
+  list: "Voir les questions"
   add: "Ajouter une question"
 account:
   signin: "Se connecter"
