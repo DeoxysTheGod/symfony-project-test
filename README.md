@@ -21,9 +21,10 @@ This project is for educational purposes only. It is a simple QCM project with S
 
 ## Requirements
 
-This project works with the symfony API in the following repository `https://github.com/DeoxysTheGod/symfony-project-api.git`.
-
-To run this project properly, you need to have the API running.
+> [!important]
+> This project works with the symfony API in the following repository `https://github.com/DeoxysTheGod/symfony-project-api.git`.
+>
+> To run this project properly, you need to have the API running.
 
 You also need to have the following tools installed on your machine:
 * **php:** `8.3.15`
