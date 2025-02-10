@@ -26,6 +26,9 @@ This project is for educational purposes only. It is a simple QCM project with S
 >
 > To run this project properly, you need to have the API running.
 
+> [!important]
+> The API have to be running on the port `127.0.0.1:8001`.
+
 You also need to have the following tools installed on your machine:
 * **php:** `8.3.15`
 * **symfony:** `7.2.2`
