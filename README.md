@@ -22,7 +22,7 @@ This project is for educational purposes only. It is a simple QCM project with S
 ## Requirements
 
 > [!important]
-> This project works with the symfony API in the following repository <a href="https://github.com/DeoxysTheGod/symfony-project-api.git"><kbd> <br> API Repository <br> </kbd></a>.
+> This project works with the symfony API in the following repository <a align="center" href="https://github.com/DeoxysTheGod/symfony-project-api.git"><kbd> <br> API Repository <br> </kbd></a>.
 >
 > To run this project properly, you need to have the API running.
 
