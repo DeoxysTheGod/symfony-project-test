@@ -1,10 +1,12 @@
 <div align="center">
+
 # ~~ QCM Project with Symfony ~~
+
 </div>
 
 <div align="center">
   <br>
-  <a href="https://www.php.net/manual/en/"><kbd> <br> PHP doc <br> </kbd></a>
+  <a href="https://www.php.net/manual/en/"><kbd> <br> PHP doc <br> </kbd></a>&ensp;&ensp;
   <a href="https://symfony.com/doc/current/index.html"><kbd> <br> Symfony doc <br> </kbd></a>&ensp;&ensp;
   <a href="https://getcomposer.org/doc/"><kbd> <br> Composer doc <br> </kbd></a>&ensp;&ensp;
 </div><br>
